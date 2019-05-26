@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta name="mobile-web-app-capable" content="yes">
+  <title>Slides</title>
+  <link rel="stylesheet" href="css/rev.css">
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <meta name="theme-color" content="#111111">
+</head>
+<body>
+    <div class="reveal">
+      <div class="slides">
+        <section>
+          <h4>Fortalezas:</h4>
+        </section>
+        <section>
+          <h4>Oportunidades</h4>
+        </section>
+        <section>
+          <h4>Debilidades:</h4>
+        </section>
+        <section>
+          <h4>Amenazas:</h4>
+        </section>
+      </div>
+    </div>
+    <script src="js/reveal.js"></script>
+    <script src="js/swal.js"></script>
+    <script>
+    var getOrientation = false;
+    function orientations(){
+      let d = false;
+      let x = document.querySelector(".reveal");
+      if(window.innerHeight < window.innerWidth){
+        x.style.display = "block";
+        d = false;
+      }else{
+        d = true;
+        x.style.display = "none";
+        swal({
+          title:"Voltea tu pantalla", 
+          text:"Está presentación solo se mostrará en tu pantalla si esta de manera horizontal.", 
+          icon:"error"
+        })
+      }
+      return d;
+    }
+    
+    function evalFirst(){
+    if(!orientations()) {
+      if(!getOrientation){
+        swal({
+          title:"Bienvenido 😀", 
+          text:"Está es una presentación dinámica, para mejorar tu experiencia veras el contenido en pantalla completa."
+        })
+        .then(() =>{
+          getOrientation = true;
+          document.body.requestFullscreen();
+        })
+        Reveal.initialize({
+          center:true, 
+          transition:"zoom", 
+          hideAddressBar:true
+      });
+      }else{
+        swal.close();
+      }
+    }
+    } 
+    evalFirst();
+    window.onresize = ()=>{
+      evalFirst();
+    }
+    </script>
+</body>
+</html>
