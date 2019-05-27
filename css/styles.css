@@ -3,3 +3,30 @@ body {
    height:100vh!important;
  }
 
+.reveal ul{
+  
+  padding:0;
+  margin: 0 auto;
+}
+.reveal ul li {
+  margin:0;
+  font-size:17px;
+}
+
+.redBgrs{
+  background: #F44336;
+  padding:05px;
+  border-radius:5px;
+}
+.blueBgrs{
+  font-size:25px!important;
+}
+.sBlueBgrs{
+  margin-top:3px!important;
+  margin-left: -50px!important;
+  background :#fff;
+  color: #2196F3;
+  padding:05px;
+  border-radius:5px;
+  display:block;
+}
