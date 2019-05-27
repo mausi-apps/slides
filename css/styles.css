@@ -1,42 +1,31 @@
 .reveal .slides{
   margin-top:-15px;
 }
-
-.red{
-  background: #F44336;
+.reveal .slides ul li{
   padding:20px 30px;
   border-radius:10px;
+}
+.red{
+  background: #F44336;
 }
 
 .orange{
   background:#FF5722;
-  padding:20px 30px;
-  border-radius:10px;
 }
 
 .yellow{
   background:#FFEB3B;
   color:#555;
-  padding:20px 30px;
-  border-radius:10px;
 }
 .green{
   background:#4CAF50;
-  padding:20px 30px;
-  border-radius:10px;
 }
 .blue{
   background:#2196F3;
-  padding:20px 30px;
-  border-radius:10px;
 }
 .purple{
   background:#AB47BC;
-  padding:20px 30px;
-  border-radius:10px;
 }
 .gray{
   background:#555;
-  padding:20px 30px;
-  border-radius:10px;
 }
