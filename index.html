@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-<meta name="mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
   <title>Slides</title>
   <link rel="stylesheet" href="css/rev.css">
   <link rel="stylesheet" href="css/default.css">
@@ -13,13 +13,11 @@
 <body>
     <div class="reveal">
       <div class="slides">
-        <section></section>
-        <section>
+        <section data-background-color="#eeeeee"></section>
+        <section data-background-color="#dddddd">
           <h4>Fortalezas:</h4>
           <ul>
-
             <li data-color="red" class="fragment fade-up">Recursos financieros obtenidos adecuadamente.  💰</li>
-
             <li data-color="red" class="fragment big fade-up">Innovación. ✨</li>
             <li data-color="red" class="fragment fade-up">Contar con personal eficiente y capacitado. 👦💼</li>
             <li data-color="red" class="fragment fade-up
@@ -30,9 +28,7 @@
         <section>
           <h4>Oportunidades:</h4>
           <ul>
-
             <li data-color="red" class="fragment fade-up">Fortalezer creatividad y aprendizaje. 🎨</li>
-
             <li data-color="orange" class="fragment fade-up">Influencias internacionales. 🗺️</li>
             <li data-color="yellow" class="fragment fade-up">Aplicación de Cartera de productos. 🛒</li>
             <li data-color="green" class="fragment fade-up
@@ -43,14 +39,11 @@
         <section>
           <h4>Debilidades:</h4>
           <ul>
-
             <li data-color="gray" class="fragment fade-up">No tener capacidad para enfrentarse a la competencia. 📊</li>
-
             <li data-color="blue" class="fragment fade-up big">Grupos grandes. 😵</li>
             <li data-color="gray" class="fragment fade-up">Poco presupuesto. 💲</li>
             <li data-color="blue" class="fragment fade-up
             ">Atención deficiente al público. 📢</li>
-            
           </ul>
         </section>
         <section>
@@ -84,12 +77,11 @@
       }
       return d;
     }
-    
     function evalFirst(){
     if(!orientations()) {
       if(!getOrientation){
         swal({
-          title:"Bienvenido 😀", 
+          title:"Bienvenido", 
           text:"Está es una presentación dinámica, para mejorar tu experiencia veras el contenido en pantalla completa."
         })
         .then(() =>{
@@ -97,7 +89,6 @@
           document.body.requestFullscreen();
           main();
         })
-        
       }else{
         swal.close();
       }
@@ -134,5 +125,4 @@
     }
     </script>
 </body>
-
 </html>
