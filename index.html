@@ -16,12 +16,12 @@
         <section>
           <h4>Fortalezas:</h4>
           <ul>
-            <li class="redBgr fragment fade-up">Recursos financieros obtenidos adecuadamente. </li>
-            <li class="activeRed fragment fade-down blueBgrs">Innovación.</li>
-            <li class="sBlueBgrs fragment fade-left">Contar con personal eficiente y capacitado. </li>
-            <li class="fragment fade-right 
+            <li class="redBgrs fragment fade-up">Recursos financieros obtenidos adecuadamente. </li>
+            <li class="fragment fade-up">Innovación.</li>
+            <li class="fragment fade-up">Contar con personal eficiente y capacitado. </li>
+            <li class="fragment fade-up
             ">Buen ambiente laboral</li>
-            <li class="fragment fade-in">Apoyo colateral externo para fortalecer la empresa</li>
+            <li class="fragment fade-up">Apoyo colateral externo para fortalecer la empresa</li>
           </ul>
         </section>
         <section>
@@ -67,7 +67,7 @@
         .then(() =>{
           getOrientation = true;
           document.body.requestFullscreen();
-          setTimeout(()=>{
+          
               Reveal.initialize({
 
           center:true, 
@@ -76,13 +76,15 @@
           hideAddressBar:true
       });
       Reveal.addEventListener("fragmentshown", function (e){
-      if(e.fragment.classList.contains("activeRed")){
-
-        let bgr = document.querySelector(".redBgr");
-        bgr.classList.add("redBgrs");
+      
+      let bgr = document.querySelectorAll(".fragment");
+      for(let i =0;i<bgr.length;i++){
+        
+        bgr[i].classList.remove("redBgrs");
       }
+        e.fragment.classList.add("redBgrs");
     });
-          }, 1000)
+          
         })
         
       }else{
