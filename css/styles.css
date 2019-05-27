@@ -1,56 +1,42 @@
-body {
-   
-   height:100vh!important;
- }
-
-.reveal ul{
-  
-  padding:0;
-  margin: 0 auto;
-}
-.reveal ul li {
-  margin:0;
-  font-size:17px;
+.reveal .slides{
+  margin-top:-15px;
 }
 
 .red{
   background: #F44336;
-  padding:05px;
-  border-radius:5px;
+  padding:20px 30px;
+  border-radius:10px;
 }
 
 .orange{
   background:#FF5722;
-  padding:05px;
-  border-radius:5px;
+  padding:20px 30px;
+  border-radius:10px;
 }
 
 .yellow{
   background:#FFEB3B;
-  padding:05px;
   color:#555;
-  border-radius:5px;
+  padding:20px 30px;
+  border-radius:10px;
 }
 .green{
   background:#4CAF50;
-  padding:05px;
-  border-radius:5px;
+  padding:20px 30px;
+  border-radius:10px;
 }
 .blue{
   background:#2196F3;
-  padding:05px;
-  border-radius:5px;
+  padding:20px 30px;
+  border-radius:10px;
 }
 .purple{
   background:#AB47BC;
-  padding:05px;
-  border-radius:5px;
+  padding:20px 30px;
+  border-radius:10px;
 }
 .gray{
   background:#555;
-  padding:05px;
-  border-radius:5px;
-}
-.big{
-  font-size:20px!important;
+  padding:20px 30px;
+  border-radius:10px;
 }

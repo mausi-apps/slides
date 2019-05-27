@@ -13,12 +13,12 @@
 <body>
     <div class="reveal">
       <div class="slides">
-        <section data-background-color="#eeeeee"></section>
-        <section data-background-color="#dddddd">
-          <h4>Fortalezas:</h4>
+        <section></section>
+        <section data-background="#555555">
+          <h2>Fortalezas:</h2>
           <ul>
             <li data-color="red" class="fragment fade-up">Recursos financieros obtenidos adecuadamente.  💰</li>
-            <li data-color="red" class="fragment big fade-up">Innovación. ✨</li>
+            <li data-color="red" class="fragment fade-up">Innovación. ✨</li>
             <li data-color="red" class="fragment fade-up">Contar con personal eficiente y capacitado. 👦💼</li>
             <li data-color="red" class="fragment fade-up
             ">Buen ambiente laboral. 🏗️</li>
@@ -26,7 +26,7 @@
           </ul>
         </section>
         <section>
-          <h4>Oportunidades:</h4>
+          <h2>Oportunidades:</h4>
           <ul>
             <li data-color="red" class="fragment fade-up">Fortalezer creatividad y aprendizaje. 🎨</li>
             <li data-color="orange" class="fragment fade-up">Influencias internacionales. 🗺️</li>
@@ -37,17 +37,17 @@
           </ul>
         </section>
         <section>
-          <h4>Debilidades:</h4>
+          <h2>Debilidades:</h2>
           <ul>
             <li data-color="gray" class="fragment fade-up">No tener capacidad para enfrentarse a la competencia. 📊</li>
-            <li data-color="blue" class="fragment fade-up big">Grupos grandes. 😵</li>
+            <li data-color="blue" class="fragment fade-up">Grupos grandes. 😵</li>
             <li data-color="gray" class="fragment fade-up">Poco presupuesto. 💲</li>
             <li data-color="blue" class="fragment fade-up
             ">Atención deficiente al público. 📢</li>
           </ul>
         </section>
         <section>
-          <h4>Amenazas:</h4>
+          <h2>Amenazas:</h2>
           <ul>
             <li data-color="yellow" class="fragment fade-up">Ecepticismo a los continuos cambios. 📈</li>
             <li data-color="green" class="fragment fade-up">Falta de contratos. 📃</li>
@@ -103,8 +103,10 @@
       Reveal.initialize({
           center:true, 
           transition:"concave", 
-          hideAddressBar:true
+          hideAddressBar:true, 
+          backgroundTransition: 'fade'
       });
+      
       Reveal.addEventListener("fragmentshown",(e) => addColor(e));
       Reveal.addEventListener("fragmenthidden",(e) => addColor(e, true));
     } 
