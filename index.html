@@ -16,12 +16,12 @@
         <section>
           <h4>Fortalezas:</h4>
           <ul>
-            <li class="redBgrs fragment fade-up">Recursos financieros obtenidos adecuadamente. </li>
-            <li class="fragment fade-up">Innovación.</li>
-            <li class="fragment fade-up">Contar con personal eficiente y capacitado. </li>
-            <li class="fragment fade-up
+            <li data-color="red" class="fragment fade-up">Recursos financieros obtenidos adecuadamente. </li>
+            <li data-color="orange" class="fragment fade-up">Innovación.</li>
+            <li data-color="yellow" class="fragment fade-up">Contar con personal eficiente y capacitado. </li>
+            <li data-color="green" class="fragment fade-up
             ">Buen ambiente laboral</li>
-            <li class="fragment fade-up">Apoyo colateral externo para fortalecer la empresa</li>
+            <li data-color="blue" class="fragment fade-up">Apoyo colateral externo para fortalecer la empresa</li>
           </ul>
         </section>
         <section>
@@ -67,24 +67,7 @@
         .then(() =>{
           getOrientation = true;
           document.body.requestFullscreen();
-          
-              Reveal.initialize({
-
-          center:true, 
-
-          transition:"zoom", 
-          hideAddressBar:true
-      });
-      Reveal.addEventListener("fragmentshown", function (e){
-      
-      let bgr = document.querySelectorAll(".fragment");
-      for(let i =0;i<bgr.length;i++){
-        
-        bgr[i].classList.remove("redBgrs");
-      }
-        e.fragment.classList.add("redBgrs");
-    });
-          
+          main();
         })
         
       }else{
@@ -96,8 +79,22 @@
     window.onresize = ()=>{
       evalFirst();
     }
-    
-    
+    function  main(){
+      Reveal.initialize({
+          center:true, 
+          transition:"zoom", 
+          hideAddressBar:true
+      });
+      Reveal.addEventListener("fragmentshown", function (e){
+        let color = e.fragment.getAttribute("data-color");
+      
+        let bgr = document.querySelectorAll(".fragment");
+        for(let i =0;i<bgr.length;i++){
+          bgr[i].classList.remove("red", "orange", "yellow", "green", "blue", "purple", "gray");
+        }
+        e.fragment.classList.add(color);
+        });
+    }
     </script>
 </body>
 </html>

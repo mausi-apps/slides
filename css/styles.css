@@ -13,8 +13,41 @@ body {
   font-size:17px;
 }
 
-.redBgrs{
+.red{
   background: #F44336;
+  padding:05px;
+  border-radius:5px;
+}
+
+.orange{
+  background:#FF5722;
+  padding:05px;
+  border-radius:5px;
+}
+
+.yellow{
+  background:#FFEB3B;
+  padding:05px;
+  color:#555;
+  border-radius:5px;
+}
+.green{
+  background:#4CAF50;
+  padding:05px;
+  border-radius:5px;
+}
+.blue{
+  background:#2196F3;
+  padding:05px;
+  border-radius:5px;
+}
+.purple{
+  background:#AB47BC;
+  padding:05px;
+  border-radius:5px;
+}
+.gray{
+  background:#555;
   padding:05px;
   border-radius:5px;
 }
