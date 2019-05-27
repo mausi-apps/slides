@@ -14,7 +14,7 @@
     <div class="reveal">
       <div class="slides">
         <section></section>
-        <section data-background="#555555">
+        <section >
           <h2>Fortalezas:</h2>
           <ul>
             <li data-color="red" class="fragment fade-up">Recursos financieros obtenidos adecuadamente.  💰</li>
@@ -81,7 +81,7 @@
     if(!orientations()) {
       if(!getOrientation){
         swal({
-          title:"Bienvenido", 
+          title:"Bienvenido 👦📊", 
           text:"Está es una presentación dinámica, para mejorar tu experiencia veras el contenido en pantalla completa."
         })
         .then(() =>{
@@ -104,7 +104,9 @@
           center:true, 
           transition:"concave", 
           hideAddressBar:true, 
-          backgroundTransition: 'fade'
+          backgroundTransition: 'fade', 
+          margin:0.15, 
+          slideNumber :true
       });
       
       Reveal.addEventListener("fragmentshown",(e) => addColor(e));
