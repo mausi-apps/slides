@@ -83,7 +83,8 @@
   margin:0;
   border-radius:500px;
   padding:25px;
-  transition:all 0.3s ease-in;
+  transition:background 0.2s linear;
+  background:#fff;
 }
 .reveal .slides section form ul li a{
   position: relative ;

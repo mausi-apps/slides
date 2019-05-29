@@ -170,16 +170,25 @@
     function evalQuest(e, n, c, i){
       if(n === c){
         let arry = [1,2,3];
-        let nz = arry.filter((v)=> v == n);
+        arry.splice(arry.indexOf(n), 1);
        
-       form[i].childNodes[3].childNodes[(2 * nz[0])-1].classList.add("badOff");
-       form[i].childNodes[3].childNodes[(2 * nz[1])-1].classList.add("badOff");
+       form[i].childNodes[3].childNodes[(2 * arry[0])-1].classList.add("badOff");
+       form[i].childNodes[3].childNodes[(2 * arry[0])-1].childNodes[0].childNodes[0].textContent = "close";
+       form[i].childNodes[3].childNodes[(2 * arry[1])-1].childNodes[0].childNodes[0].textContent = "close";
+       form[i].childNodes[3].childNodes[(2 * arry[1])-1].classList.add("badOff");
        
         e.target.classList.add("check");
+        e.target.childNodes[0].childNodes[0].textContent = "check";
       }else{
         e.target.classList.add("bad");
+        e.target.childNodes[0].childNodes[0].textContent = "close";
         form[i].childNodes[3].childNodes[(2*c)-1].classList.add("checkOff")
         form[i].childNodes[3].childNodes[11-(2*(c+n))].classList.add("badOff")
+        
+        form[i].childNodes[3].childNodes[(2*c)-1].childNodes[0].childNodes[0].textContent ="check";
+
+        form[i].childNodes[3].childNodes[11-(2*(c+n))].classList.add("badOff")
+        form[i].childNodes[3].childNodes[11-(2*(c+n))].childNodes[0].childNodes[0].textContent = "close"
       }
     }
     </script>
