@@ -5,6 +5,7 @@
 }
 .reveal .slides{
   background:rgba(0,0,0,.7);
+  border-radius:10px;
 }
 .reveal .slides  section{
   padding:0;
@@ -41,4 +42,14 @@
 .gray{
   background:#555;
   box-shadow:0 0 10px rgba(0,0,0,.4);
+}
+.amber{
+  background:#FFB300;
+  
+}
+.ins{
+  font-size:50px;
+  padding: 20px 35px ;
+  font-weight: bold ;
+  border-radius:500px;
 }

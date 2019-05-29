@@ -14,7 +14,11 @@
 <body>
     <div class="reveal">
       <div class="slides">
-        <section></section>
+        <section>
+          <h2>F.O.D.A de AlliedFriends®</h2>
+          <p>Por favor ingresa tu nombre 😉</p>
+          <input type="text" placeholder="Nombre o apodo" class="ins">
+        </section>
         <section data-background-image="./img/f0.jpg">
           <h2>Fortalezas:</h2>
           <ul>
@@ -27,7 +31,7 @@
           </ul>
         </section>
         <section data-background-image="./img/o0.png">
-          <h2>Oportunidades:</h4>
+          <h2>Oportunidades:</h2>
           <ul>
             <li data-color="red" class="fragment fade-up" data-background-image="./img/o1.jpg">Fortalezer creatividad y aprendizaje. 🎨</li>
             <li data-background-image="./img/o2.jpeg" data-color="orange" class="fragment fade-up">Influencias internacionales. 🗺️</li>
@@ -37,24 +41,27 @@
             <li data-background-image="./img/o5.jpg" data-color="blue" class="fragment fade-up">Aprovechamientos de tendencías. 🏅</li>
           </ul>
         </section>
-        <section>
+        <section data-background-image="./img/d0.jpg">
           <h2>Debilidades:</h2>
           <ul>
-            <li data-color="gray" class="fragment fade-up">No tener capacidad para enfrentarse a la competencia. 📊</li>
-            <li data-color="blue" class="fragment fade-up">Grupos grandes. 😵</li>
-            <li data-color="gray" class="fragment fade-up">Poco presupuesto. 💲</li>
+            <li data-color="gray" class="fragment fade-up" data-background-image="./img/d1.jpg">No tener capacidad para enfrentarse a la competencia. 📊</li>
+            <li data-color="blue" class="fragment fade-up" data-background-image="./img/d2.jpg">Grupos grandes. 😵</li>
+            <li data-color="gray" class="fragment fade-up" data-background-image="./img/d3.jpg">Poco presupuesto. 💲</li>
             <li data-color="blue" class="fragment fade-up
-            ">Atención deficiente al público. 📢</li>
+            " data-background-image="./img/d4.jpg">Atención deficiente al público. 📢</li>
+            <li data-color="blue" class="fragment fade-up" data-background-image="./img/d5.jpg">Mala infraestructura. 🗃️</li>
           </ul>
         </section>
-        <section>
+        <section data-background-image="./img/a0.jpg">
           <h2>Amenazas:</h2>
           <ul>
-            <li data-color="yellow" class="fragment fade-up">Ecepticismo a los continuos cambios. 📈</li>
-            <li data-color="green" class="fragment fade-up">Falta de contratos. 📃</li>
+            <li data-color="amber" class="fragment fade-up" data-background-image="./img/a1.jpg">Ecepticismo a los continuos cambios. 📈</li>
+            <li data-color="gray" class="fragment fade-up" data-background-image="./img/a2.jpg">Falta de contratos. 📃</li>
+            <li data-color="amber" class="fragment fade-up"   data-background-image="./img/a3.jpg">Reconocimiento inicial 😅</li>
+            <li data-color="gray" class="fragment fade-up" data-background-image="./img/a4.jpg">Posicionamiento global 🏆</li>
+            <li data-color="amber" class="fragment fade-up" data-background-image="./img/a6.jpg">Influencia social 🎤</li>
           </ul>
         </section>
-        <section></section>
       </div>
     </div>
     <script src="js/reveal.js"></script>
@@ -134,7 +141,7 @@
 
       let bgr = document.querySelectorAll(".fragment");
       for(let i =0;i<bgr.length;i++){
-        bgr[i].classList.remove("red", "orange", "yellow", "green", "blue", "purple", "gray");
+        bgr[i].classList.remove("red", "orange", "yellow", "green", "blue", "purple", "gray", "amber");
         }
         e.classList.add(color);
     }
