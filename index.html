@@ -8,32 +8,33 @@
   <link rel="stylesheet" href="css/rev.css">
   <link rel="stylesheet" href="css/default.css">
   <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="fonts/icons.css">
   <meta name="theme-color" content="#111111">
 </head>
 <body>
     <div class="reveal">
       <div class="slides">
         <section></section>
-        <section >
+        <section data-background-image="./img/f0.jpg">
           <h2>Fortalezas:</h2>
           <ul>
-            <li data-color="red" class="fragment fade-up">Recursos financieros obtenidos adecuadamente.  💰</li>
-            <li data-color="red" class="fragment fade-up">Innovación. ✨</li>
-            <li data-color="red" class="fragment fade-up">Contar con personal capacitado. 👦💼</li>
+            <li data-color="red" class="fragment fade-up"  data-background-image="./img/f2.jpg">Recursos financieros obtenidos adecuadamente. 💰 </li>
+            <li data-color="red" class="fragment fade-up" data-background-image="./img/f1.jpg">Innovación. ✨</li>
+            <li data-color="red" class="fragment fade-up" data-background-image="./img/f3.jpg">Contar con personal capacitado. 👦</li>
             <li data-color="red" class="fragment fade-up
-            ">Buen ambiente laboral. 🏗️</li>
-            <li data-color="red" class="fragment fade-up">Apoyo colateral externo 🌍</li>
+            " data-background-image="./img/f4.jpg">Buen ambiente laboral. ️🏖️</li>
+            <li data-color="red" class="fragment fade-up" data-background-image="./img/f5.jpg">Apoyo colateral externo 🌍</li>
           </ul>
         </section>
-        <section>
+        <section data-background-image="./img/o0.png">
           <h2>Oportunidades:</h4>
           <ul>
-            <li data-color="red" class="fragment fade-up">Fortalezer creatividad y aprendizaje. 🎨</li>
-            <li data-color="orange" class="fragment fade-up">Influencias internacionales. 🗺️</li>
-            <li data-color="yellow" class="fragment fade-up">Aplicación de Cartera de productos. 🛒</li>
-            <li data-color="green" class="fragment fade-up
+            <li data-color="red" class="fragment fade-up" data-background-image="./img/o1.jpg">Fortalezer creatividad y aprendizaje. 🎨</li>
+            <li data-background-image="./img/o2.jpeg" data-color="orange" class="fragment fade-up">Influencias internacionales. 🗺️</li>
+            <li data-background-image="./img/o3.jpg" data-color="yellow" class="fragment fade-up">Aplicación de Cartera de productos. 🛒</li>
+            <li data-background-image="./img/o4.png" data-color="green" class="fragment fade-up
             ">Nuevas tecnologías y procesos productivos. 💻</li>
-            <li data-color="blue" class="fragment fade-up">Aprovechamientos de tendencías. 🏅</li>
+            <li data-background-image="./img/o5.jpg" data-color="blue" class="fragment fade-up">Aprovechamientos de tendencías. 🏅</li>
           </ul>
         </section>
         <section>
@@ -60,7 +61,7 @@
     <script src="js/swal.js"></script>
     <script>
     var getOrientation = false;
-    function orientations(){
+      function orientations(){
       let d = false;
       let x = document.querySelector(".reveal");
       if(window.innerHeight < window.innerWidth){
@@ -110,9 +111,9 @@
       
       Reveal.addEventListener("fragmentshown",(e) => addColor(e));
       Reveal.addEventListener("fragmenthidden",(e) => addColor(e, true));
-    } 
+          } 
     function addColor(n, p=false){
-      let e, color;
+      let e, color, currentBackground;
       if(p){
         e = n.fragment.previousElementSibling;
        color = e.getAttribute("data-color");
@@ -120,6 +121,17 @@
         e = n.fragment;
         color = e.getAttribute("data-color");
       }
+      let backgroundContent = document.querySelector(".present > .slide-background-content");
+      backgroundContent.style.opacity = "0";
+      currentBackground = e.getAttribute("data-background-image");
+
+      setTimeout(()=>{
+          backgroundContent.style.transition = "opacity 0.3s ease-in";
+          backgroundContent.style.backgroundImage = `url(./${currentBackground})`;
+          backgroundContent.style.opacity = "1";
+      }, 200);
+      
+
       let bgr = document.querySelectorAll(".fragment");
       for(let i =0;i<bgr.length;i++){
         bgr[i].classList.remove("red", "orange", "yellow", "green", "blue", "purple", "gray");

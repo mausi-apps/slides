@@ -3,6 +3,9 @@
   padding:20px 30px;
   border-radius:10px;
 }
+.reveal .slides{
+  background:rgba(0,0,0,.7);
+}
 .reveal .slides  section{
   padding:0;
   margin:0;
@@ -10,25 +13,32 @@
 }
 .red{
   background: #F44336;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
 }
 
 .orange{
   background:#FF5722;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
 }
 
 .yellow{
   background:#FFEB3B;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
   color:#555;
 }
 .green{
   background:#4CAF50;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
 }
 .blue{
   background:#2196F3;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
 }
 .purple{
   background:#AB47BC;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
 }
 .gray{
   background:#555;
+  box-shadow:0 0 10px rgba(0,0,0,.4);
 }
