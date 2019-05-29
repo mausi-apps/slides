@@ -30,6 +30,16 @@
             <li data-color="red" class="fragment fade-up" data-background-image="./img/f5.jpg">Apoyo colateral externo 🌍</li>
           </ul>
         </section>
+        <section>
+          <form data-answer="2" class="question">
+            <h3>Pregunta...?</h3>
+            <ul>
+              <li><a role="button"><i class="material-icons">filter_1</i>Respuesta 1</a></li>
+              <li><a role="button"><i class="material-icons">filter_2</i>Respuesta 2</a></li>
+              <li><a role="button"><i class="material-icons">filter_3</i>Respuesta 3</a></li>
+            </ul>
+          </form>
+        </section>
         <section data-background-image="./img/o0.png">
           <h2>Oportunidades:</h2>
           <ul>
@@ -144,6 +154,33 @@
         bgr[i].classList.remove("red", "orange", "yellow", "green", "blue", "purple", "gray", "amber");
         }
         e.classList.add(color);
+    }
+    let form = document.querySelectorAll(".question");
+    
+    
+    for(let i =0;i<1;i++){
+      
+      let c = parseInt(form[i].getAttribute("data-answer"));
+      
+      form[i].childNodes[3].childNodes[1].addEventListener("click", (e) => evalQuest(e, 1, c, i));
+      form[i].childNodes[3].childNodes[3].addEventListener("click", (e) => evalQuest(e, 2, c, i));
+      form[i].childNodes[3].childNodes[5].addEventListener("click", (e) => evalQuest(e, 3, c, i));
+    }
+    
+    function evalQuest(e, n, c, i){
+      if(n === c){
+        let arry = [1,2,3];
+        let nz = arry.filter((v)=> v == n);
+       
+       form[i].childNodes[3].childNodes[(2 * nz[0])-1].classList.add("badOff");
+       form[i].childNodes[3].childNodes[(2 * nz[1])-1].classList.add("badOff");
+       
+        e.target.classList.add("check");
+      }else{
+        e.target.classList.add("bad");
+        form[i].childNodes[3].childNodes[(2*c)-1].classList.add("checkOff")
+        form[i].childNodes[3].childNodes[11-(2*(c+n))].classList.add("badOff")
+      }
     }
     </script>
 </body>
