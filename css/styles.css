@@ -65,7 +65,7 @@
   transform:scale(0.8,0.8);
 }
 .reveal .slides section form h3{
-  background:#FFB300;
+  background:linear-gradient(to right, #FFB300, #FF6F00) ;
   padding:25px;
   margin:0;
   color:#fff;
@@ -130,10 +130,18 @@
 .reveal .slides section form ul .checkOff a{
   color:#fff;
 }
-  
+@keyframes bad{
+  0%{margin-left:0;margin-right:0} 
+  12%{margin-left:-50px;margin-right:0}
+  25%{margin-left:0;margin-right:-50px}
+  37%{margin-left:-50px;margin-right:0}
+  50%{margin-left:0;margin-right:-50px}
+  100%{margin-left:0;margin-right:0}
+}
 .reveal .slides section form ul .bad{
   border-color:#EF5350;
   background: #EF5350;
+  animation:bad 0.7s linear 1;
 }
 .reveal .slides section form ul .bad a i{
   color:#EF5350;
@@ -161,4 +169,13 @@
  
 .reveal .slides section form ul li:nth-child(2){
   margin:30px 0;
+}
+.reveal .slides section .shadow{
+  position:absolute;
+  top:0;
+  left: 0;
+  height:100%;
+  width:100%;
+  background:transparent;
+  display:none;
 }
