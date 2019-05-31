@@ -19,6 +19,16 @@
           <p>Por favor ingresa tu nombre 😉</p>
           <input type="text" placeholder="Nombre o apodo" class="ins">
         </section>
+        <section>
+          <h2>Introducción</h2>
+          <p>
+            Análisis DAFO
+herramienta de estudio de la situación de una empresa o un proyecto. 
+
+Matriz Análisis FODA.
+El análisis de sus características internas (Debilidades y Fortalezas) y su situación externa (Amenazas y Oportunidades) en una matriz cuadrada.
+          </p>
+        </section>
         <section data-background-image="./img/f0.jpg">
           <h2>Fortalezas:</h2>
           <ul>
@@ -31,12 +41,12 @@
           </ul>
         </section>
         <section data-state="quest">
-          <form data-answer="2" class="question">
-            <h3>Pregunta...?</h3>
+          <form data-answer="1" class="question">
+            <h3>¿Qué factores fortalecen una empresa?</h3>
             <ul>
-              <li><a role="button"><i class="material-icons">filter_1</i>Respuesta 1</a></li>
-              <li><a role="button"><i class="material-icons">filter_2</i>Respuesta 2</a></li>
-              <li><a role="button"><i class="material-icons">filter_3</i>Respuesta 3</a></li>
+              <li><a role="button"><i class="material-icons">filter_1</i>Ambiente Productivo</a></li>
+              <li><a role="button"><i class="material-icons">filter_2</i>Capacitaciones</a></li>
+              <li><a role="button"><i class="material-icons">filter_3</i>Bonificaciones</a></li>
             </ul>
             <div class="shadow"></div>
           </form>
@@ -54,13 +64,13 @@
         </section>
         <section data-state="quest">
 
-          <form data-answer="2" class="question">
+          <form data-answer="3" class="question">
 
-            <h3>Pregunta...?</h3>
+            <h3>¿Que método es indispensable?</h3>
             <ul>
-              <li><a role="button"><i class="material-icons">filter_1</i>Respuesta 1</a></li>
-              <li><a role="button"><i class="material-icons">filter_2</i>Respuesta 2</a></li>
-              <li><a role="button"><i class="material-icons">filter_3</i>Respuesta 3</a></li>
+              <li><a role="button"><i class="material-icons">filter_1</i>Bajos costos</a></li>
+              <li><a role="button"><i class="material-icons">filter_2</i>Calidad de atención</a></li>
+              <li><a role="button"><i class="material-icons">filter_3</i>Presencia en Internet</a></li>
             </ul>
             <div class="shadow"></div>
           </form>
@@ -77,12 +87,12 @@
           </ul>
         </section>
         <section data-state="quest">
-          <form data-answer="2" class="question">
-            <h3>Pregunta...?</h3>
+          <form data-answer="3" class="question">
+            <h3>¿Cómo sé llama la compañera?</h3>
             <ul>
-              <li><a role="button"><i class="material-icons">filter_1</i>Respuesta 1</a></li>
-              <li><a role="button"><i class="material-icons">filter_2</i>Respuesta 2</a></li>
-              <li><a role="button"><i class="material-icons">filter_3</i>Respuesta 3</a></li>
+              <li><a role="button"><i class="material-icons">filter_1</i>Mausy</a></li>
+              <li><a role="button"><i class="material-icons">filter_2</i>Miausi</a></li>
+              <li><a role="button"><i class="material-icons">filter_3</i>Mausi</a></li>
             </ul>
             <div class="shadow"></div>
           </form>
@@ -99,50 +109,17 @@
         </section>
         <section data-state="quest">
           <form data-answer="2" class="question">
-            <h3>Pregunta...?</h3>
+            <h3>¿Cuál es una amenaza potencial?</h3>
             <ul>
-              <li><a role="button"><i class="material-icons">filter_1</i>Respuesta 1</a></li>
-              <li><a role="button"><i class="material-icons">filter_2</i>Respuesta 2</a></li>
-              <li><a role="button"><i class="material-icons">filter_3</i>Respuesta 3</a></li>
+              <li><a role="button"><i class="material-icons">filter_1</i>Estancamiento en el mercado</a></li>
+              <li><a role="button"><i class="material-icons">filter_2</i>No estar a la vanguardia</a></li>
+              <li><a role="button"><i class="material-icons">filter_3</i>Pocos empleados</a></li>
             </ul>
             <div class="shadow"></div>
           </form>
         </section>
         <section data-state="results" class="getR">
-          <div class="res">
-            <h4 class="usrName">Alex</h4>
-            <h4 class="usrPoints">750pts</h4>
-          </div>
-             <div class="res">
-
-            <h4 class="usrName">Alex</h4>
-
-            <h4 class="usrPoints">750pts</h4>
-          </div>
-             <div class="res">
-
-            <h4 class="usrName">Alex</h4>
-
-            <h4 class="usrPoints">750pts</h4>
-          </div>
-             <div class="res">
-
-            <h4 class="usrName">Alex</h4>
-
-            <h4 class="usrPoints">750pts</h4>
-          </div>
-             <div class="res">
-
-            <h4 class="usrName">Alex</h4>
-
-            <h4 class="usrPoints">750pts</h4>
-          </div>
-             <div class="res">
-
-            <h4 class="usrName">Alex</h4>
-
-            <h4 class="usrPoints">750pts</h4>
-          </div>
+          
         </section>
       </div>
     </div>
@@ -157,7 +134,7 @@
     
     setInterval(()=>{
       send(4, (e)=> {
-      if(e.includes("go")){
+      if(e.includes("gos")){
         Reveal.next();
       }
       })
@@ -224,7 +201,7 @@
         Reveal.configure({controls:false} )
         
       }
-      if (ones == 1 || ones == 3 || ones == 5 ){
+      if (ones == 2 || ones == 4 || ones == 6 ){
         Reveal.configure({touch:false});
       }
     })
@@ -233,7 +210,7 @@
     })
     Reveal.addEventListener("results", ()=>{
 
-      Reveal.configure({touch:true});
+      Reveal.configure({touch:false});
 send({
 f:5,
 name:name,
